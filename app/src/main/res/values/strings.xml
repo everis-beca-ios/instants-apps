@@ -13,5 +13,7 @@
         completions."
     </string>
     <string name="title_activity_listabeca">Listabeca</string>
-    <string name="nomeFulano">Olá %1$d, esta é uma lista dos novos becarios IOS.</string>
+    <string name="ola_usuario">Olá, %1$s!</string>
+    <string name="lista_becarios_texto">Esta é uma lista dos novos becários de iOS</string>
+    <string name="becaiOS">&lt;BecaiOS&gt;</string>
 </resources>
