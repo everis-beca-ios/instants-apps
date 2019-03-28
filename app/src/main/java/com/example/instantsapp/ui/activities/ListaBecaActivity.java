@@ -25,7 +25,7 @@ import com.example.instantsapp.viewmodel.BecariosViewModel;
 
 import java.util.List;
 
-public class ListaBecaActivity extends AppCompatActivity {
+public class ListaBecaActivity extends AppCompatActivity implements AlunosBecaAdapter.AcoesNaLista {
 
     private RecyclerView rvListaBeca;
     private TextView tvBemVindo;
@@ -53,7 +53,7 @@ public class ListaBecaActivity extends AppCompatActivity {
     private void iniciarViews() {
         rvListaBeca = findViewById(R.id.rv_lista_beca);
         rvListaBeca.setLayoutManager(new LinearLayoutManager(this));
-        rvListaBeca.setAdapter(new AlunosBecaAdapter());
+        rvListaBeca.setAdapter(new AlunosBecaAdapter(this));
         tvBemVindo = findViewById(R.id.tv_bem_vindo);
         viewModel = ViewModelProviders
                 .of(this).get(BecariosViewModel.class);
@@ -106,5 +106,12 @@ public class ListaBecaActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void clickNoItem(InfoUsuarios infoUsuarios) {
+        Intent intent = new Intent(this, DetalheBecarioActivity.class);
+        intent.putExtra("dados_usuario",infoUsuarios);
+        startActivity(intent);
     }
 }

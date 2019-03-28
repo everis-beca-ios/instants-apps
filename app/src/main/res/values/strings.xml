@@ -14,6 +14,7 @@
     </string>
     <string name="title_activity_listabeca">Listabeca</string>
     <string name="ola_usuario">Olá, %1$s!</string>
+    <string name="arroma_id">\@%1$s</string>
     <string name="lista_becarios_texto">Esta é uma lista dos novos becários de iOS</string>
     <string name="becaiOS">&lt;BecaiOS&gt;</string>
 </resources>
