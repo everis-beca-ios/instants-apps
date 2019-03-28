@@ -14,9 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".DetalheBecario"
+            android:label="@string/title_activity_detalhe_becario"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Listabeca"
             android:label="@string/title_activity_listabeca"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name">
