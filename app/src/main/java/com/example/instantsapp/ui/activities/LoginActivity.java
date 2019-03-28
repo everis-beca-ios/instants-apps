@@ -54,6 +54,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btLogar;
     private BecariosViewModel viewModel;
     private MutableLiveData<Constantes.Resposta> resposta;
+    private ImageView imgTopo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,12 +67,16 @@ public class LoginActivity extends AppCompatActivity {
         etPass = findViewById(R.id.et_password);
         etLogin = findViewById(R.id.et_login);
         btLogar = findViewById(R.id.bt_logar);
+        imgTopo =  findViewById(R.id.imageView);
         btLogar.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 validarELancarTelaDetalhes();
             }
         });
+        Picasso.get()
+                .load(R.drawable.everislogo)
+                .into(imgTopo);
     }
 
     private void validarELancarTelaDetalhes() {
